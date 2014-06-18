@@ -11,11 +11,13 @@ import org.apache.log4j.Logger;
 //искусственные цветы
 public class Artificials extends Flower {
 
-    private static final Logger log = Logger.getLogger(Artificials.class);
+    private static final Logger LOG = Logger.getLogger(Artificials.class);
+    private static final long serialVersionUID = -8315084913736400165L;
 
     private String material;
 
-    public Artificials() {
+    public Artificials(int id) {
+        super(id);
     }
 
     public String getMaterial() {
@@ -26,7 +28,7 @@ public class Artificials extends Flower {
         if (material != null) {
             this.material = material;
         } else {
-            log.warn("Material can not be null. Value has not been assigned.");
+            LOG.warn("Material can not be null. Value has not been assigned.");
         }
     }
 

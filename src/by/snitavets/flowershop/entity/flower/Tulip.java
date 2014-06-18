@@ -8,11 +8,13 @@ import org.apache.log4j.Logger;
  */
 public class Tulip extends NaturalFlower {
 
-    private static final Logger log = Logger.getLogger(Tulip.class);
+    private static final Logger LOG = Logger.getLogger(Tulip.class);
+    private static final long serialVersionUID = 6394694334297346522L;
 
     private int durationOfFlowering;
 
-    public Tulip() {
+    public Tulip(int id) {
+        super(id);
     }
 
     public int getDurationOfFlowering() {
@@ -23,7 +25,7 @@ public class Tulip extends NaturalFlower {
         if (durationOfFlowering > 0) {
             this.durationOfFlowering = durationOfFlowering;
         } else {
-            log.warn("Duration of flowering must be greater than zero. Value has not been assigned.");
+            LOG.warn("Duration of flowering must be greater than zero. Value has not been assigned.");
         }
     }
 

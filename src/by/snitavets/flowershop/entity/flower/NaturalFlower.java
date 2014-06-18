@@ -10,10 +10,12 @@ import org.apache.log4j.Logger;
 //живые цветы
 public class NaturalFlower extends Flower {
 
-    private static final Logger log = Logger.getLogger(NaturalFlower.class);
+    private static final Logger LOG = Logger.getLogger(NaturalFlower.class);
+    private static final long serialVersionUID = 8722413815083004258L;
     private int lifetime; //in days
 
-    public NaturalFlower() {
+    public NaturalFlower(int id) {
+        super(id);
     }
 
     public int getLifetime() {
@@ -24,7 +26,7 @@ public class NaturalFlower extends Flower {
         if (lifetime > 0) {
             this.lifetime = lifetime;
         } else {
-            log.warn("Lifetime must be greater than zero. Value has not been assigned.");
+            LOG.warn("Lifetime must be greater than zero. Value has not been assigned.");
         }
     }
 

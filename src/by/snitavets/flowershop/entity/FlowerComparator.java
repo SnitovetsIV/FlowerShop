@@ -10,7 +10,7 @@ public class FlowerComparator implements Comparator<Flower> {
 
     @Override
     public int compare(Flower t, Flower t1) {
-        return t.compareTo(t1);
+        return t.getFreshness().compareTo(t1.getFreshness());
     }
 
 }

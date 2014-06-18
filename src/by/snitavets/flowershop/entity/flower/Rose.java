@@ -9,11 +9,13 @@ import org.apache.log4j.Logger;
  */
 public class Rose extends NaturalFlower {
 
-    private static final Logger log = Logger.getLogger(Rose.class);
+    private static final Logger LOG = Logger.getLogger(Rose.class);
+    private static final long serialVersionUID = -902940241373274008L;
 
     private RoseType type;
 
-    public Rose() {
+    public Rose(int id) {
+        super(id);
     }
 
     public RoseType getType() {
@@ -24,7 +26,7 @@ public class Rose extends NaturalFlower {
         if (type != null) {
             this.type = type;
         } else {
-            log.warn("Type of rose can not be null. Value has not been assigned.");
+            LOG.warn("Type of rose can not be null. Value has not been assigned.");
         }
     }
 

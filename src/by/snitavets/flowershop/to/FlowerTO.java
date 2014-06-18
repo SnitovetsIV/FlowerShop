@@ -9,6 +9,7 @@ import java.awt.Color;
  */
 public abstract class FlowerTO {
 
+    public int id;
     public double price;
     public Color color;
     public FreshnessEnum freshness;

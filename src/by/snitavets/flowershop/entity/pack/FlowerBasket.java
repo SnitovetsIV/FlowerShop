@@ -9,12 +9,14 @@ import org.apache.log4j.Logger;
  */
 public class FlowerBasket extends FlowerPackaging {
 
-    private static final Logger log = Logger.getLogger(FlowerBasket.class);
+    private static final Logger LOG = Logger.getLogger(FlowerBasket.class);
+    private static final long serialVersionUID = 4920110948891371389L;
 
     private int height;     //sm
     private double diameter;//sm
 
-    public FlowerBasket() {
+    public FlowerBasket(int id) {
+        super(id);
     }
 
     public int getHeight() {
@@ -25,7 +27,7 @@ public class FlowerBasket extends FlowerPackaging {
         if (height > 0) {
             this.height = height;
         } else {
-            log.warn("Height of basket must be greater than zero. Value has not been assigned.");
+            LOG.warn("Height of basket must be greater than zero. Value has not been assigned.");
         }
     }
 
@@ -37,7 +39,7 @@ public class FlowerBasket extends FlowerPackaging {
         if (diameter > 0) {
             this.diameter = diameter;
         } else {
-            log.warn("Diameter of basket must be greater than zero. Value has not been assigned.");
+            LOG.warn("Diameter of basket must be greater than zero. Value has not been assigned.");
         }
     }
 

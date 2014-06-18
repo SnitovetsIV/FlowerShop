@@ -1,5 +1,6 @@
 package by.snitavets.flowershop.entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 import org.apache.log4j.Logger;
 
@@ -7,12 +8,18 @@ import org.apache.log4j.Logger;
  *
  * @author Илья
  */
-public abstract class FlowerPackaging {
+public abstract class FlowerPackaging implements Serializable {
 
-    private static final Logger log = Logger.getLogger(FlowerPackaging.class);
+    private static final Logger LOG = Logger.getLogger(FlowerPackaging.class);
+    private static final long serialVersionUID = 8040514024292573738L;
 
+    private final int id;
     private String material;
     private double price;
+
+    public FlowerPackaging(int id) {
+        this.id = id;
+    }
 
     public double getPrice() {
         return price;
@@ -22,7 +29,7 @@ public abstract class FlowerPackaging {
         if (price > 0) {
             this.price = price;
         } else {
-            log.warn("Price must be greater than zero. Value has not been assigned.");
+            LOG.warn("Price must be greater than zero. Value has not been assigned.");
         }
     }
 
@@ -34,7 +41,7 @@ public abstract class FlowerPackaging {
         if (material != null) {
             this.material = material;
         } else {
-            log.warn("Material can not be null. Value has not been assigned.");
+            LOG.warn("Material can not be null. Value has not been assigned.");
         }
     }
 

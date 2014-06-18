@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  */
 public class FlowerBasketFactory extends FlowerPackagingFactory {
 
-    private static final Logger log = Logger.getLogger(FlowerBasketFactory.class);
+    private static final Logger LOG = Logger.getLogger(FlowerBasketFactory.class);
 
     private static FlowerBasketFactory instance;
 
@@ -31,11 +31,11 @@ public class FlowerBasketFactory extends FlowerPackagingFactory {
     @Override
     public FlowerPackaging createFlowerPackaging(FlowerPackagingTO to) throws TOException {
         if ((null == to) || !(to instanceof FlowerBasketTO)) {
-            log.error("Illegal TO.");
+            LOG.error("Illegal TO.");
             throw new TOException("Illegal TO.");
         }
         FlowerBasketTO ato = (FlowerBasketTO) to;
-        FlowerBasket flowerPackaging = new FlowerBasket();
+        FlowerBasket flowerPackaging = new FlowerBasket(to.id);
         flowerPackaging.setDiameter(ato.diameter);
         flowerPackaging.setHeight(ato.height);
         flowerPackaging.setMaterial(ato.material);

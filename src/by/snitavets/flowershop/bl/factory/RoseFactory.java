@@ -11,9 +11,9 @@ import org.apache.log4j.Logger;
  *
  * @author Илья
  */
-public class RoseFactory extends FlowerFactory{
-    
-    private static final Logger log = Logger.getLogger(RoseFactory.class);
+public class RoseFactory extends FlowerFactory {
+
+    private static final Logger LOG = Logger.getLogger(RoseFactory.class);
 
     private static RoseFactory instance;
 
@@ -30,11 +30,11 @@ public class RoseFactory extends FlowerFactory{
     @Override
     public Rose createFlower(FlowerTO to) throws TOException {
         if ((null == to) || !(to instanceof RoseTO)) {
-            log.error("Illegal TO.");
+            LOG.error("Illegal TO.");
             throw new TOException("Illegal TO.");
         }
         RoseTO roseTO = (RoseTO) to;
-        Rose rose = new Rose();
+        Rose rose = new Rose(to.id);
         rose.setPrice(roseTO.price);
         rose.setColor(roseTO.color);
         rose.setFreshness(roseTO.freshness);
@@ -43,5 +43,5 @@ public class RoseFactory extends FlowerFactory{
         rose.setType(roseTO.type);
         return rose;
     }
-    
+
 }

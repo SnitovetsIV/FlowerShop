@@ -3,6 +3,7 @@ package by.snitavets.flowershop.bl;
 import by.snitavets.flowershop.entity.FloralComposition;
 import by.snitavets.flowershop.entity.Flower;
 import by.snitavets.flowershop.entity.FlowerPackaging;
+import by.snitavets.flowershop.exception.LogicException;
 import java.util.Iterator;
 import org.apache.log4j.Logger;
 
@@ -12,13 +13,13 @@ import org.apache.log4j.Logger;
  */
 public class Counter {
 
-    private static final Logger log = Logger.getLogger(Counter.class);
+    private static final Logger LOG = Logger.getLogger(Counter.class);
 
     public static double countTotalPrice(FloralComposition floralComposition)
-            throws IllegalArgumentException {
+            throws LogicException {
         if (floralComposition == null) {
-            log.error("Floral composition can not be null.");
-            throw new IllegalArgumentException("Floral composition can not be null.");
+            LOG.error("Floral composition can not be null.");
+            throw new LogicException("Floral composition can not be null.");
         }
         double result = 0;
         Iterator<Flower> it = floralComposition.getAllFlowers();

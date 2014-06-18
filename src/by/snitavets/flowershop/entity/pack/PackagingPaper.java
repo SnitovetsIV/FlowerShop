@@ -9,11 +9,13 @@ import org.apache.log4j.Logger;
  */
 public class PackagingPaper extends FlowerPackaging {
 
-    private static final Logger log = Logger.getLogger(PackagingPaper.class);
+    private static final Logger LOG = Logger.getLogger(PackagingPaper.class);
+    private static final long serialVersionUID = 8198297971576719011L;
 
     private int length; //sm
 
-    public PackagingPaper() {
+    public PackagingPaper(int id) {
+        super(id);
     }
 
     @Override
@@ -49,7 +51,7 @@ public class PackagingPaper extends FlowerPackaging {
         if (length > 0) {
             this.length = length;
         } else {
-            log.warn("Lenght of paper must be greater than zero. Value has not been assigned.");
+            LOG.warn("Lenght of paper must be greater than zero. Value has not been assigned.");
         }
     }
 

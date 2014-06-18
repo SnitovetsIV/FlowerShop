@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class TulipFactory extends FlowerFactory {
 
-    private static final Logger log = Logger.getLogger(TulipFactory.class);
+    private static final Logger LOG = Logger.getLogger(TulipFactory.class);
 
     private static TulipFactory instance;
 
@@ -30,11 +30,11 @@ public class TulipFactory extends FlowerFactory {
     @Override
     public Tulip createFlower(FlowerTO to) throws TOException {
         if ((null == to) || !(to instanceof TulipTO)) {
-            log.error("Illegal TO.");
+            LOG.error("Illegal TO.");
             throw new TOException("Illegal TO.");
         }
         TulipTO tulipTO = (TulipTO) to;
-        Tulip tulip = new Tulip();
+        Tulip tulip = new Tulip(to.id);
         tulip.setPrice(tulipTO.price);
         tulip.setColor(tulipTO.color);
         tulip.setFreshness(tulipTO.freshness);

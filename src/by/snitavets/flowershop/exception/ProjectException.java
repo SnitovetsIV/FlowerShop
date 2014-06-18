@@ -16,4 +16,7 @@ public class ProjectException extends Exception {
         super(er);
     }
 
+    public ProjectException() {
+    }
+    
 }

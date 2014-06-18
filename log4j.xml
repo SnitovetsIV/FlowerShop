@@ -7,7 +7,7 @@
         </layout>
     </appender>
     <appender name="A1" class="org.apache.log4j.FileAppender">
-        <param name="File" value="logs\\log.txt" />
+        <param name="File" value="log\\log.txt" />
         <layout class="org.apache.log4j.PatternLayout" >
             <param name="ConversionPattern" value="%d{dd.MM.yyyy HH:mm:ss} [%t] %-5p %c %x - %m%n"/>
         </layout>

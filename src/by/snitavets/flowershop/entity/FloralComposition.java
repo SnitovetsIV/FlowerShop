@@ -13,7 +13,7 @@ import org.apache.log4j.Logger;
  */
 public class FloralComposition {
 
-    private static final Logger log = Logger.getLogger(FloralComposition.class);
+    private static final Logger LOG = Logger.getLogger(FloralComposition.class);
 
     private List<Flower> allFlowers;
     private FlowerPackaging pack;
@@ -30,7 +30,7 @@ public class FloralComposition {
         if (pack != null) {
             this.pack = pack;
         } else {
-            log.warn("Flower packaging can not be null. Value has not been assigned.");
+            LOG.warn("Flower packaging can not be null. Value has not been assigned.");
         }
     }
 
@@ -38,7 +38,7 @@ public class FloralComposition {
         if (flower != null) {
             allFlowers.add(flower);
         } else {
-            log.warn("Added flower can not be null. Flower has not been added.");
+            LOG.warn("Added flower can not be null. Flower has not been added.");
         }
     }
 
@@ -46,7 +46,7 @@ public class FloralComposition {
         if (newList != null) {
             this.allFlowers = newList;
         } else {
-            log.warn("New list of flowers can not be null. Value has not been assigned.");
+            LOG.warn("New list of flowers can not be null. Value has not been assigned.");
         }
     }
 
@@ -54,7 +54,7 @@ public class FloralComposition {
         if (comparator != null) {
             allFlowers.sort(comparator);
         } else {
-            log.warn("Comparator can not be null. Floral composition don't sort.");
+            LOG.warn("Comparator can not be null. Floral composition don't sort.");
         }
     }
 
@@ -90,7 +90,7 @@ public class FloralComposition {
 
     @Override
     public String toString() {
-        return getClass().getName() + "{" + "allFlowers=" + allFlowers + ", pack=" + pack + "}";
+        return getClass().getName() + "{" + "allFlowers=" + allFlowers + ", pack=" + pack + '}';
     }
 
 }
