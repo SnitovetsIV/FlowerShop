@@ -75,3 +75,6 @@
 23.06.2014 20:39:10 [main] INFO  by.snitavets.flowershop.logic.action.FloralCompositionPriceCounter  - Total price of  =6.8999999999999995
 23.06.2014 20:39:10 [main] INFO  by.snitavets.flowershop.logic.action.FloralCompositionSorter  - Floral composition sorted
 23.06.2014 20:39:10 [main] INFO  by.snitavets.flowershop.logic.action.FindFlowerByStem  - Found by stem [1,30]CutFlower{storageTime=12} NaturalFlower{typeOfReproduction=LAYERING} AbstractFlower{id=1, price=2.3, color=java.awt.Color[r=255,g=175,b=175], freshness=FRESHEST, stemLength=10}
+24.06.2014 23:21:39 [main] INFO  by.snitavets.flowershop.logic.action.FloralCompositionPriceCounter  - Total price of  =6.8999999999999995
+24.06.2014 23:21:39 [main] INFO  by.snitavets.flowershop.logic.action.FloralCompositionSorter  - Floral composition sorted
+24.06.2014 23:21:39 [main] INFO  by.snitavets.flowershop.logic.action.FindFlowerByStem  - Found by stem [1,30]CutFlower{storageTime=12} NaturalFlower{typeOfReproduction=LAYERING} AbstractFlower{id=1, price=2.3, color=java.awt.Color[r=255,g=175,b=175], freshness=FRESHEST, stemLength=10}
