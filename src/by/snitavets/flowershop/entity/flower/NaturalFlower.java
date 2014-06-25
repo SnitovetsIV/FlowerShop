@@ -13,7 +13,7 @@ public class NaturalFlower extends AbstractFlower {
     private static final Logger LOG = Logger.getLogger(NaturalFlower.class);
     private static final long serialVersionUID = 8722413815083004258L;
 
-    private ReproductionType reproductionType;
+    private ReproductionType reproductionType = ReproductionType.BULB;
 
     public NaturalFlower(int id) {
         super(id);
@@ -50,11 +50,8 @@ public class NaturalFlower extends AbstractFlower {
 
         NaturalFlower other = (NaturalFlower) o;
 
-        if (reproductionType != other.reproductionType) {
-            return false;
-        }
+        return reproductionType == other.reproductionType;
 
-        return true;
     }
 
     @Override

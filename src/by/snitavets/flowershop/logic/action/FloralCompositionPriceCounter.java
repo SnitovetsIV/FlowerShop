@@ -15,8 +15,7 @@ public class FloralCompositionPriceCounter {
 
     private static final Logger LOG = Logger.getLogger(FloralCompositionPriceCounter.class);
 
-    public static double countTotalPrice(FloralComposition floralComposition)
-            throws LogicException {
+    public static double countTotalPrice(FloralComposition floralComposition) throws LogicException {
         if (floralComposition == null) {
             throw new LogicException("Floral composition can not be null.");
         }
