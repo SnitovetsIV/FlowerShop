@@ -24,7 +24,7 @@ public class PackagingPaper extends AbstractFlowerPackaging {
         if (length > 0) {
             this.length = length;
         } else {
-            LOG.warn("Lenght of paper must be greater than zero. Value has not been assigned.");
+            LOG.warn("Length of paper must be greater than zero. Value has not been assigned.");
         }
     }
 

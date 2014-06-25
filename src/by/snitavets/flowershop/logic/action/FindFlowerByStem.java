@@ -17,11 +17,9 @@ public class FindFlowerByStem {
     public static AbstractFlower findByRangeOfStem(FloralComposition floralComposition, int lowerLimit, int upperLimit)
             throws LogicException {
         if (lowerLimit < 0 || upperLimit < 0 || upperLimit < lowerLimit) {
-            LOG.error("Illegal argument. Illegal range.");
             throw new LogicException("Illegal range.");
         }
         if (floralComposition == null) {
-            LOG.error("Illegal argument. Floral composition can not be null");
             throw new LogicException("Illegal argument. Floral composition can not be null");
         }
         AbstractFlower result = null;
