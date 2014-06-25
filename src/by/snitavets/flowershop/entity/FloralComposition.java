@@ -44,7 +44,7 @@ public class FloralComposition {
         if (flower != null) {
             allFlowers.add(flower);
         } else {
-            LOG.warn("Added flower can not be null. Flower has not been added.");
+            LOG.warn("Flower can not be null. Flower has not been added.");
         }
     }
 

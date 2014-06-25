@@ -20,6 +20,9 @@ public class CutFloralCompositionBuilder extends AbstractFloralCompositionBuilde
         list.add(new CutFlower(1, 2.3, Color.PINK, FreshnessType.FRESHEST, 10, ReproductionType.LAYERING, 12));
         list.add(new CutFlower(2, 2.3, Color.blue, FreshnessType.NOT_FRESH, 12, ReproductionType.CUTTING, 121));
         list.add(new CutFlower(3, 2.3, Color.magenta, FreshnessType.SECOND_FRESH, 15, ReproductionType.BULB, 13));
+        if (getFlowerBouquet() == null) {
+            createNewFloralComposition("Best");
+        }
         getFlowerBouquet().setAllFlowers(list);
     }
 

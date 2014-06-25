@@ -32,7 +32,7 @@ public class NaturalFlower extends AbstractFlower {
         if (reproductionType != null) {
             this.reproductionType = reproductionType;
         } else {
-            LOG.warn("reproductionType can not be null. Value has not been assigned.");
+            LOG.warn("ReproductionType can not be null. Value has not been assigned.");
         }
     }
 
